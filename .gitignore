@@ -1,0 +1,43 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# data/ : les sources brutes et les gros fichiers intermédiaires ne sont PAS
+# committés (trop volumineux pour GitHub - limite dure de 100 Mo par fichier -
+# ou régénérables par le pipeline.py de chaque étape, voir son README). Seuls
+# les résultats "finis" et de taille raisonnable le sont.
+# ═══════════════════════════════════════════════════════════════════════════
+
+# données brutes : sources tierces volumineuses ou soumises à condition
+# d'usage (voir 00_transformation_des_donnees/README.md), jamais committées -
+# SAUF data/donnees_brutes/reference/ : vendorisé par nous (petit, pas une
+# source tierce), nécessaire pour reproduire un résultat sans rien recalculer
+# (voir 01_clustering_des_usages/reference.py).
+data/donnees_brutes/*
+!data/donnees_brutes/reference/
+
+# données valides : résultats de 00_transformation_des_donnees - gardés par
+# défaut (tables "finies", petites, utiles telles quelles). Exceptions, les
+# caches intermédiaires volumineux, tous régénérables par pipeline.py :
+
+# ~200 Mo - débit horaire codé de tous les capteurs
+data/donnees_valides/capteurs/sensors.msgpack
+# ~600 Mo - débit horaire codé, un fichier par année
+data/donnees_valides/debit_brut/
+# ~190 Mo - géométrie complète des 34 428 communes
+data/donnees_valides/zones/communes.parquet
+# ~240 Mo - mosaïque SRTM (relief)
+data/donnees_valides/geographie/france_srtm.tif
+# ~80 Mo - cours d'eau/littoral extraits d'OSM
+data/donnees_valides/geographie/waterways_coastline.gpkg
+
+# ═══════════════════════════════════════════════════════════════════════════
+# le reste (Python, notebooks, éditeurs)
+# ═══════════════════════════════════════════════════════════════════════════
+
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+build/
+dist/
+
+# notebooks : garder les .ipynb (sorties incluses, c'est voulu), ignorer les checkpoints
+.ipynb_checkpoints/

@@ -1,0 +1,22 @@
+<!-- Squelette HTML de la légende de la carte des capteurs (voir carte.py::_legende_html). Les onglets de
+profil (__TABS__ dans carte_capteurs.js) sont ajoutés dynamiquement en JS dans #legend-tabs-container,
+pas ici, car leur nombre dépend du paramètre `profil` de carte_capteurs(). -->
+<div id='cluster-legend'>
+<div class='legend-header'>Capteurs par cluster</div>
+<div id='cluster-counts'></div>
+<div class='legend-footer'><strong>Total :</strong> <span id='total-count'>0</span></div>
+</div>
+<div id='interactive-legend'>
+<button id='btnCollapse' class='legend-collapse-btn' title='Afficher / Masquer les panneaux'>Cacher</button>
+<div class='legend-controls'><div><strong>__TITRE_MODELE__</strong> - cliquez un cluster dans la légende pour l'isoler</div></div>
+<div id='legend-body'>
+<div class='legend-tabs' id='legend-tabs-container'></div>
+<div id='profiles-content' class='legend-content'></div>
+<div id='markers-content' class='legend-content' style='display:none;'>
+<div class='sensor-legend-content'>
+<div class='sensor-row'><div class='sensor-visual' style='background:linear-gradient(to right,#999 50%,#666 50%);'></div><div class='sensor-label'>2 capteurs au même point : deux demi-disques</div></div>
+<div class='sensor-row'><div class='sensor-visual' style='background:conic-gradient(#999 0 25%,#777 25% 50%,#555 50% 75%,#333 75% 100%);'></div><div class='sensor-label'>N capteurs (jusqu'à 8) : secteurs</div></div>
+</div>
+</div>
+</div>
+</div>
