@@ -3,9 +3,18 @@
 **⚠️ Toujours en développement.**
 
 Estime le BKT (Bike-Kilomètres Travelled) national : des données brutes (capteurs, communes, réseau
-cyclable) au chiffre final, cluster par cluster et année par année. Méthode retenue : linéaire d'une
-commune réparti entre ses clusters au prorata du débit de ses capteurs, "Z complet", rognage choisi
-par validation croisée leave-one-out.
+cyclable) au chiffre final, cluster par cluster et année par année.
+Méthode retenue simplement décrite :
+Nous disposons de débit de capteurs, de linéaire cyclable.
+Nous utilisons les débits pour trouver les différents clusters ie pratiques cyclable dominantes de ces capteurs.
+Nous utilisons les délimitations des communes pour définir une "zone d'influence" pour les capteurs. Le mots zone et commune sont interchangeables pour tout le projet.
+Pour toutes les communes, avec du linéaire cyclable et des capteurs, nous attribuons le linéaire de la commune proportionnellement au débit de chaque cluster présent dans celle-ci.
+Nous calculons le bkt observé c'est à dire le nombre de kilomètres parcourues observé, ainsi : linéaire du cluster dans la commune * (somme des débits des capteurs du cluster dans la commune/ nombre de capteurs du cluster dans la commune).
+Nous "extrapolons" ensuite, utilisant des données socio-économiques et géographiques, pour trouver la pratique dominante des communes non instrumentées. Pour ce faire nous décidons que dans les communes instrumentées donc qui possède un ou plusieurs capteurs donc un ou plusieurs clusters, la pratique dominante de cette commune est le cluster au plus gros débit.
+Maintenant, nous disposons du bkt observé, et des communes non observés c'est-à-dire du linéaire cyclable réparti par cluster sans débit.
+Pour remédier au débit absent, nous calculons un "taux de fréquentation par km" pour chaque cluster en calculant pour chaque zone le nombre de kilomètres parcourus / le nombre de kilomètres disponible. On en fait ensuite une moyenne générale par cluster en utilisant une moyenne spéciale (chercher LOOCV dans les notebooks) qui élimine l'influence de valeurs extrêmes.
+Enfin, après avoir du "linéaire cyclable non observé", et un "taux de fréquentation par km" pour chaque cluster, nous multiplions l'un par l'autre pour obtenir la part "extrapolée" du BKT.
+Nous additionnons enfin la part observée (bkt observé) et la part extrapolée et nous obtenons le BKT national (aussi appelé BKT ext ou extrapolé dans les notebooks).
 
 ## Installation
 
