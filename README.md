@@ -13,16 +13,15 @@ par validation croisée leave-one-out.
 uv sync
 ```
 
-Installe tout ce qu'il faut (Python 3.12+, voir `pyproject.toml`). Pour ouvrir/ré-exécuter les
-notebooks en plus :
+Pour tout installer et exécuter les notebooks et autres code annexe au pipeline du BKT :
 
 ```
 uv sync --extra notebooks
 ```
 
-## Comment lancer le pipeline
+## Lancer le pipeline
 
-Tout d'un coup :
+Le pipeline complet :
 
 ```
 uv run python full_pipeline.py
@@ -35,7 +34,7 @@ cd src/<dossier_étape>
 uv run python pipeline.py
 ```
 
-Une étape déjà calculée est sautée automatiquement - relancer après une interruption ne refait donc
+**Une étape déjà calculée est sautée automatiquement** - relancer après une interruption ne refait donc
 que ce qui manque (`FORCER_LE_RECALCUL = True` dans le `pipeline.py` de l'étape pour forcer).
 
 ## Où trouver quoi
@@ -44,10 +43,10 @@ que ce qui manque (`FORCER_LE_RECALCUL = True` dans le `pipeline.py` de l'étape
 src/
     00_transformation_des_donnees/       sources brutes -> tables validées (zones, capteurs, QTA...)
     01_clustering_des_usages/            cluster d'usage K4 de chaque capteur
-    02_classification_des_communes/      cluster K4 prédit de chaque commune (sans capteur y compris)
-    03_creation_du_jeu_de_donnees_cyclable/   réseau cyclable (méthode retenue : 02_FOB/)
-    04_jointure_des_donnees/             assemble tout ça en 3 tables
-    05_calcul_du_bkt_observe/            BKT observé, réparti par cluster au prorata du débit
+    02_classification_des_communes/      cluster K4 prédit de chaque commune sans capteur mais avec des aménagements cyclables
+    03_creation_du_jeu_de_donnees_cyclable/   jeu de données du réseau cyclable (méthode retenue : FOB)
+    04_jointure_des_donnees/             assemble toutes les données en 3 tables
+    05_calcul_du_bkt_observe/            BKT observé
     06_calcul_du_bkt_extrapole/          BKT extrapolé - le chiffre final
     99_visualisations_et_tableaux/       indicateurs, intervalles de confiance, Excel, cartes
 
