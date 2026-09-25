@@ -1,0 +1,45 @@
+[project]
+name = "bkt-vv6"
+version = "1.0.0"
+description = "Pipeline complet du BKT (bike-kilometres travelled), des données brutes au classeur final - méthode retenue : linéaire réparti par cluster au prorata du débit, Z complet, rognage LOOCV par cluster"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Olivier Borot" }]
+
+dependencies = [
+    "numpy>=2.4,<2.5",
+    "pandas>=3.0,<3.1",
+    "pyarrow>=23",
+    "scipy>=1.17,<1.18",
+    "scikit-learn>=1.8,<1.9",
+    "lightgbm>=4.6,<4.7",
+    "joblib>=1.5",
+    "scikit-fda>=0.10,<0.11",
+    "multimethod>=2.0,<2.1",
+    "networkx>=3.6",
+    "geopandas>=1.1,<1.2",
+    "shapely>=2.1,<2.2",
+    "pyproj>=3.7",
+    "rasterio>=1.5",
+    "rasterstats>=0.21",
+    "osmium>=4.3",
+    "msgpack>=1.2",
+    "openpyxl>=3.1",
+    "python-calamine>=0.8",
+    "xlsxwriter>=3.2",
+    "pydantic>=2.9",
+    "optuna>=4.0",
+    "folium>=0.20,<0.21",
+    "matplotlib>=3.10",
+]
+
+[project.optional-dependencies]
+# Uniquement pour ouvrir/ré-exécuter les notebooks (pas nécessaire pour lancer un pipeline.py) :
+# uv sync --extra notebooks
+notebooks = ["jupyter", "nbformat", "nbclient", "ipykernel"]
+
+# Pas un paquet Python installable (src/ n'a pas de __init__.py - chaque étape est un script
+# indépendant, lancé avec `python pipeline.py` depuis son propre dossier) : ce fichier ne sert qu'à
+# décrire les dépendances pour `uv sync`, pas à construire un wheel.
+[tool.uv]
+package = false
