@@ -5,6 +5,14 @@ description = "Pipeline complet du BKT (bike-kilometres travelled), des données
 readme = "README.md"
 requires-python = ">=3.12"
 authors = [{ name = "Olivier Borot" }]
+license = "LGPL-3.0-or-later"
+license-files = ["LICENSE"]
+classifiers = [
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: GIS",
+]
 
 dependencies = [
     "numpy>=2.4,<2.5",

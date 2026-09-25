@@ -96,6 +96,7 @@ data/donnees_valides/bkt/bkt_final_national.csv   le chiffre final du BKT, par a
 data/donnees_valides/bkt/bkt_final.xlsx           le classeur Excel complet
 data/donnees_valides/bkt/cartes/                  cartes de communes (couverture, cluster)
 data/donnees_brutes/README.md                     où obtenir chaque source brute (pas fournie avec ce dépôt)
+outputs/cartes/carte_capteurs.html                carte interactive des capteurs par cluster (notebook étape 01)
 ```
 
 Chaque dossier de `src/` a son propre README (dossier, comment le lancer, où vont ses données) et son

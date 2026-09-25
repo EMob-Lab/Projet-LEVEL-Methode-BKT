@@ -2,7 +2,7 @@
 """Relance tout le pipeline BKT, étape par étape et dans l'ordre - une commande unique plutôt que
 d'appeler chaque `pipeline.py` à la main, un dossier après l'autre.
 
-    python full_pipeline.py
+    uv run python full_pipeline.py
 
 Chaque étape est lancée EXACTEMENT comme si on faisait `cd <dossier> && python pipeline.py` - un
 sous-processus séparé par étape (jamais un import direct : plusieurs étapes ont des fichiers de même
@@ -10,9 +10,9 @@ nom, comme `entrees.py` ou `reference.py`, qui se marcheraient dessus dans un se
 Une étape déjà calculée est sautée par son propre `pipeline.py` (voir `FORCER_LE_RECALCUL` dans chacun)
 - relancer ce script après une interruption ne refait donc que ce qui manque.
 
-Nécessite un interpréteur Python avec toutes les dépendances du projet (pandas, numpy, geopandas,
-scikit-learn, lightgbm, xlsxwriter, folium...) - voir PYTHON ci-dessous si plusieurs environnements
-coexistent sur le poste."""
+Nécessite un interpréteur Python avec toutes les dépendances du projet - voir `pyproject.toml`
+(`uv sync` installe tout) et DEPENDANCES_REQUISES ci-dessous, vérifiées avant de lancer quoi que ce
+soit."""
 
 from __future__ import annotations
 
@@ -27,15 +27,15 @@ from pathlib import Path
 RACINE = Path(__file__).resolve().parent
 DOSSIER_SRC = RACINE / "src"
 
-# L'interpréteur à utiliser pour CHAQUE étape - par défaut celui qui lance ce script. VV6 n'a pas son
-# propre .venv : remplacez cette ligne par le chemin d'un environnement contenant TOUTES les
-# dépendances du projet (pandas, numpy, geopandas, scikit-learn, lightgbm, xlsxwriter, folium,
-# msgpack, pydantic...) si celui par défaut du poste ne les a pas toutes - voir DEPENDANCES_REQUISES
-# ci-dessous, vérifiées avant de lancer quoi que ce soit.
+# L'interpréteur à utiliser pour CHAQUE étape - par défaut celui qui lance ce script (`uv run python
+# full_pipeline.py` utilise le `.venv` de VV6, voir `pyproject.toml`/`uv sync`). Remplacez cette ligne
+# par un autre chemin si besoin d'un environnement différent.
 PYTHON = sys.executable
 
 DEPENDANCES_REQUISES: tuple[str, ...] = (
-    "pandas", "numpy", "geopandas", "sklearn", "lightgbm", "xlsxwriter", "folium", "msgpack", "pydantic",
+    "pandas", "numpy", "scipy", "geopandas", "shapely", "pyproj", "rasterio", "rasterstats", "osmium",
+    "sklearn", "lightgbm", "joblib", "skfda", "networkx", "matplotlib", "folium", "xlsxwriter",
+    "openpyxl", "python_calamine", "msgpack", "pydantic", "optuna",
 )
 
 ETAPES: tuple[str, ...] = (

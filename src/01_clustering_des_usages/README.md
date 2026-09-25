@@ -36,3 +36,7 @@ Sortie :
 ```
 data/donnees_valides/clustering/cluster_assignments.parquet   lue par les étapes 02 et 04
 ```
+
+`carte.carte_capteurs()` (appelée dans le notebook, pas par `pipeline.py`) écrit en plus une carte
+interactive : `outputs/cartes/carte_capteurs.html` par défaut (ou `models/clustering_des_debits/<modele>/carte.html`
+quand elle est appelée depuis `appliquer_modele.sauvegarder_modele`, voir sa docstring).
