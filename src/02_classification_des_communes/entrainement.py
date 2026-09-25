@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Le classifieur de communes : une forêt aléatoire à classes équilibrées, réglée sous validation
 croisée groupée.
 
@@ -42,7 +41,13 @@ ESPACE_RECHERCHE = {
     "min_samples_split": [10, 15, 20, 30],
     "max_features": ["sqrt", "log2", 0.5],
 }
-PARAMETRES_PAR_DEFAUT = {"n_estimators": 800, "min_samples_split": 30, "min_samples_leaf": 8, "max_features": 0.5, "max_depth": None}
+PARAMETRES_PAR_DEFAUT = {
+    "n_estimators": 800,
+    "min_samples_split": 30,
+    "min_samples_leaf": 8,
+    "max_features": 0.5,
+    "max_depth": None,
+}
 
 
 @dataclass
@@ -51,7 +56,9 @@ class ModeleClassification:
     colonnes: list[str]
     parametres: dict
     recherche_effectuee: bool
-    accuracy_equilibree_recherche: float | None  # meilleur score de la recherche (None si PARAMETRES_PAR_DEFAUT a été utilisé)
+    accuracy_equilibree_recherche: (
+        float | None
+    )  # meilleur score de la recherche (None si PARAMETRES_PAR_DEFAUT a été utilisé)
     accuracy_equilibree_hors_pli: float
     accuracy_hors_pli: float
     accuracy_equilibree_hors_pli_bien_representes: float
@@ -66,23 +73,42 @@ class ModeleClassification:
 
 
 def _foret(parametres: dict) -> RandomForestClassifier:
-    return RandomForestClassifier(**parametres, class_weight="balanced", random_state=GRAINE, n_jobs=-1)
+    return RandomForestClassifier(
+        **parametres, class_weight="balanced", random_state=GRAINE, n_jobs=-1
+    )
 
 
-def ajuster_foret_aleatoire(jeu: JeuEntrainement, *, recherche: bool = False) -> ModeleClassification:
+def ajuster_foret_aleatoire(
+    jeu: JeuEntrainement, *, recherche: bool = False
+) -> ModeleClassification:
     """Ajuste le classifieur sur 'jeu'. 'recherche=True' relance le réglage des hyperparamètres ; par
     défaut, utilise PARAMETRES_PAR_DEFAUT."""
     X, y, poids, groupes = jeu.X, jeu.y, jeu.poids, jeu.groupes
     plis = GroupKFold(n_splits=N_PLIS)
     parametres, score_recherche = dict(PARAMETRES_PAR_DEFAUT), None
     if recherche:
-        regleur = RandomizedSearchCV(_foret({}), ESPACE_RECHERCHE, n_iter=N_TIRAGES, cv=plis, scoring="balanced_accuracy", n_jobs=-1, random_state=GRAINE)
+        regleur = RandomizedSearchCV(
+            _foret({}),
+            ESPACE_RECHERCHE,
+            n_iter=N_TIRAGES,
+            cv=plis,
+            scoring="balanced_accuracy",
+            n_jobs=-1,
+            random_state=GRAINE,
+        )
         regleur.fit(X, y, sample_weight=poids, groups=groupes)
-        parametres, score_recherche = dict(regleur.best_params_), float(regleur.best_score_)
-        print(f"[classification] recherche : meilleure accuracy équilibrée en VC {score_recherche:.4f} avec {parametres}")
+        parametres, score_recherche = (
+            dict(regleur.best_params_),
+            float(regleur.best_score_),
+        )
+        print(
+            f"[classification] recherche : meilleure accuracy équilibrée en VC {score_recherche:.4f} avec {parametres}"
+        )
 
     foret = _foret(parametres)
-    hors_pli = cross_val_predict(foret, X, y, cv=plis, groups=groupes, n_jobs=-1, params={"sample_weight": poids})
+    hors_pli = cross_val_predict(
+        foret, X, y, cv=plis, groups=groupes, n_jobs=-1, params={"sample_weight": poids}
+    )
     rares = clusters_rares(jeu)
     bien_representes = ~y.isin(rares)
     foret.fit(X, y, sample_weight=poids)
@@ -95,9 +121,17 @@ def ajuster_foret_aleatoire(jeu: JeuEntrainement, *, recherche: bool = False) ->
         accuracy_equilibree_hors_pli=float(balanced_accuracy_score(y, hors_pli)),
         accuracy_hors_pli=float((hors_pli == y.to_numpy()).mean()),
         accuracy_equilibree_hors_pli_bien_representes=(
-            float(balanced_accuracy_score(y[bien_representes], hors_pli[bien_representes.to_numpy()])) if bien_representes.any() else float("nan")
+            float(
+                balanced_accuracy_score(
+                    y[bien_representes], hors_pli[bien_representes.to_numpy()]
+                )
+            )
+            if bien_representes.any()
+            else float("nan")
         ),
         clusters_rares=rares,
     )
-    print(f"[classification] forêt aléatoire sur {len(X)} capteurs : accuracy équilibrée hors-pli {modele.accuracy_equilibree_hors_pli:.4f}, accuracy {modele.accuracy_hors_pli:.4f}")
+    print(
+        f"[classification] forêt aléatoire sur {len(X)} capteurs : accuracy équilibrée hors-pli {modele.accuracy_equilibree_hors_pli:.4f}, accuracy {modele.accuracy_hors_pli:.4f}"
+    )
     return modele

@@ -10,7 +10,7 @@ l'ordre où elles dépendent les unes des autres :
 
     zones ──────────────► communes / départements / régions (+ population INSEE, surface)
     population ─────────► population INSEE de chaque millésime
-    débits bruts ─► capteurs ─┬─► capteurs-années  (débit annuel, TMJ, indicateur d'activité)
+    débits bruts ─► capteurs ─┬─► capteurs-années  (débit annuel, QTA, indicateur d'activité)
                               └─► profils d'usage (profil horaire/hebdomadaire/annuel de chaque capteur)
     géographie OSM ─────► cours d'eau, littoral, mairies
     altitude ───────────► relief de chaque commune (modèle SRTM)

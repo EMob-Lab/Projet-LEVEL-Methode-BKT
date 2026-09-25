@@ -39,7 +39,7 @@ FICHIER_REFERENCE = (
 SOURCE_MODELE = "reference"
 
 # L'année du run de référence - funFEM classe des capteurs, pas des (capteur, année) : il faut choisir
-# UNE année de profils à classer (voir VV5/src/bkt/etape02_clustering_usage/reference.py).
+# UNE année de profils à classer.
 ANNEE_REFERENCE = 2024
 
 FORCER_LE_RECALCUL = (

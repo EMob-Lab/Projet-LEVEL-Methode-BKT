@@ -5,7 +5,7 @@ les meilleures configurations trouvées.
 
 **Outil interactif, PAS un maillon du pipeline** : rien dans '00_transformation_des_donnees' ni un
 futur 'pipeline.py' de ce dossier n'appelle 'recherche_optuna' automatiquement - une recherche
-d'hyperparamètres est un choix ponctuel (voir le run historique K=4 vendorisé, 'VV5/.../data/reference')
+d'hyperparamètres est un choix ponctuel (voir le run historique K=4 vendorisé, 'reference.py')
 qu'on ne referait qu'à la main, pour explorer ou mettre à jour la référence. Le notebook de ce dossier
 montre comment l'appeler.
 

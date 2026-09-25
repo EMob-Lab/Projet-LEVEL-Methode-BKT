@@ -1,9 +1,8 @@
 """Carte interactive (Leaflet/HTML, via folium) des capteurs, colorés par cluster d'usage : légende
 cliquable pour isoler un ou plusieurs clusters, panneau à onglets avec le profil moyen (un onglet par
 échelle demandée, voir 'profils.py') de chaque cluster, plusieurs fonds de carte (bouton en haut à
-droite) - même principe que la carte de référence du projet (voir
-'VV5/src/bkt/cartes/capteurs.py'), généralisée ici : le nombre de clusters, leurs couleurs et leurs
-noms viennent des données et des paramètres, rien n'est câblé en dur pour K=4.
+droite). Générique sur le nombre de clusters : leurs couleurs et leurs noms viennent des données et
+des paramètres, rien n'est câblé en dur pour K=4.
 
 Toujours exportée en HTML : c'est une carte interactive par nature (profils, filtre de cluster, fond de
 carte) - une image statique n'aurait pas grand sens ici.
@@ -199,7 +198,7 @@ def carte_capteurs(
     # NB : ni tuiles CartoDB ("cartodbpositron", exige une clé API depuis 2025) ni tuiles OpenStreetMap
     # officielles (tile.openstreetmap.org bloque le hotlinking/l'usage programmatique - 403 "tile usage
     # policy") - remplacées par des couches Esri, gratuites, sans clé, pas de blocage connu (même choix
-    # que VV5/src/bkt/cartes/capteurs.py, pour la même raison).
+    # qu'aux autres cartes de ce dépôt, voir '99_visualisations_et_tableaux/rendu.py').
     m = folium.Map(
         location=[46.6, 2.5],
         zoom_start=6,

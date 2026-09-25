@@ -1,0 +1,15 @@
+{
+  "n_candidates": 394283,
+  "n_incl": 384679,
+  "km_incl": 69354.51538535823,
+  "annee": 2024,
+  "n_troncons": 394283,
+  "n_troncons_geometrie": 384679,
+  "n_troncons_repli_point_median": 0,
+  "n_troncons_hors_perimetre": 1655,
+  "n_troncons_multi_communes": 18088,
+  "km_osm": 69354.51538535823,
+  "km_perimetre": 68871.8497292159,
+  "km_hors_perimetre": 482.6656561423213,
+  "km_effectif_perimetre": 137961.48137263732
+}

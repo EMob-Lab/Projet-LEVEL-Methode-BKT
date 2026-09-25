@@ -1,7 +1,7 @@
 """Un modèle de clustering "classique" : funFEM K=4 ajusté sur le SEUL profil hebdomadaire (voir
 'representation.representation_hebdomadaire'), SANS recherche d'hyperparamètres - l'alternative simple
 à 'recherche_hyperparametres.py' quand on veut juste un K=4 dans l'esprit de la taxonomie historique du
-projet (4 pratiques d'usage - voir 'VV5/src/bkt/etape02_clustering_usage/multiscale.py'), sans
+projet (4 pratiques d'usage), sans
 reproduire le run exact : ce dépôt n'utilise plus la donnée vendorisée de l'étude d'origine (voir le
 README du projet) - ce module entraîne un modèle comparable, mais sur VOS propres capteurs.
 

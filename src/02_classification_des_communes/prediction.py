@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Prédit le cluster d'usage de CHAQUE commune de France métropolitaine (34 428, pas seulement les
 ~1000 qui hébergent un capteur), et enchaîne jeu de données + entraînement + prédiction en une seule
 fonction ('preparer_classification_communes').
@@ -18,10 +17,19 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from entrainement import ModeleClassification, ajuster_foret_aleatoire  # noqa: E402
-from jeu_de_donnees import NIVEAU_DENSITE, jeu_entrainement, matrice_conception  # noqa: E402
+from jeu_de_donnees import (  # noqa: E402
+    NIVEAU_DENSITE,
+    jeu_entrainement,
+    matrice_conception,
+)
 
 
-def predire_communes(modele: ModeleClassification, communes: pd.DataFrame, observees: set[str], noms_clusters: dict[int, str] | None = None) -> pd.DataFrame:
+def predire_communes(
+    modele: ModeleClassification,
+    communes: pd.DataFrame,
+    observees: set[str],
+    noms_clusters: dict[int, str] | None = None,
+) -> pd.DataFrame:
     """Cluster et probabilités de classe de chaque commune. 'extrapolee' = 1 si la commune n'héberge
     aucun capteur utilisé à l'entraînement (son cluster est une pure prédiction, pas une observation
     directe) - un simple indicateur, pas un filtre : toutes les communes sont prédites de la même façon."""
@@ -35,6 +43,28 @@ def predire_communes(modele: ModeleClassification, communes: pd.DataFrame, obser
         sortie[f"proba_cluster_{cluster}"] = probabilites[:, position].round(4)
     sortie["extrapolee"] = (~sortie["code_commune"].isin(observees)).astype(int)
     return sortie
+
+
+def appliquer_modele_classification(
+    modele: ModeleClassification,
+    communes: pd.DataFrame,
+    capteurs: pd.DataFrame,
+    assignation_clusters: pd.DataFrame,
+    *,
+    noms_clusters: dict[int, str] | None = None,
+) -> pd.DataFrame:
+    """Applique un modèle DÉJÀ ENTRAÎNÉ (voir 'entrainement.ModeleClassification.charger') sans le
+    réajuster - le pendant "je réutilise mon modèle" de 'preparer_classification_communes' ("j'en
+    entraîne un nouveau"). Recalcule seulement 'observees' (quelles communes ont fourni un capteur
+    étiqueté - pas cher, ne nécessite pas de ré-entraînement) pour la colonne 'extrapolee'.
+
+    Utile quand un modèle a déjà été choisi à la main (recherche d'hyperparamètres lancée une fois,
+    voir 'entrainement.py') et qu'on ne veut PAS qu'une exécution du notebook ou de 'pipeline.py' le
+    remplace silencieusement par un nouveau modèle aux paramètres par défaut."""
+    labels = assignation_clusters.set_index("id_site")["cluster"]
+    jeu = jeu_entrainement(communes, capteurs, labels)
+    observees = set(jeu.groupes.unique())
+    return predire_communes(modele, communes, observees, noms_clusters)
 
 
 def preparer_classification_communes(
@@ -51,7 +81,9 @@ def preparer_classification_communes(
     'ModeleClassification.sauvegarder')."""
     labels = assignation_clusters.set_index("id_site")["cluster"]
     jeu = jeu_entrainement(communes, capteurs, labels)
-    print(f"[classification] jeu d'entraînement : {len(jeu.X)} capteurs dans {jeu.groupes.nunique()} communes, {jeu.X.shape[1]} variables")
+    print(
+        f"[classification] jeu d'entraînement : {len(jeu.X)} capteurs dans {jeu.groupes.nunique()} communes, {jeu.X.shape[1]} variables"
+    )
     modele = ajuster_foret_aleatoire(jeu, recherche=recherche)
     observees = set(jeu.groupes.unique())
     predictions = predire_communes(modele, communes, observees, noms_clusters)

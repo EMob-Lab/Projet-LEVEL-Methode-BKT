@@ -1,0 +1,434 @@
+osm_id,highway,cyclable_status,name,bicycle,cycleway,access,oneway,surface,lit,maxspeed
+19045116,residential,likely,Rue des Acacias,,,,,,,30
+19055914,unclassified,likely,Rue du Canal,,,,yes,asphalt,,30
+19055915,unclassified,likely,Rue du Canal,,,,,asphalt,yes,30
+19077516,unclassified,likely,Rue Lakanal,,opposite,,yes,asphalt,,30
+19087417,unclassified,likely,Rue Georges Chevallier,,opposite,,yes,asphalt,,30
+19087419,tertiary,likely,Place Guy Moquet,,,,yes,,,
+21277191,path,legal,,designated,,,,asphalt,yes,
+22663976,unclassified,likely,Rue Frédéric Fays,,,,yes,asphalt,yes,30
+23892137,unclassified,likely,Rue de Venise,,,,yes,asphalt,yes,30
+23892138,residential,likely,Rue de la Sérénité,,,,yes,asphalt,yes,30
+23977367,tertiary,likely,Rue Émile Zola,,,,yes,asphalt,yes,30
+23977370,tertiary,likely,Avenue Georges Dimitrov,,,,yes,asphalt,,50
+23977479,unclassified,likely,Avenue Lefèvre,,,,,asphalt,yes,
+25736273,tertiary,likely,Rue Anatole France,,,,yes,asphalt,yes,30
+25966732,residential,likely,Rue Pierre Baratin,,,,yes,asphalt,yes,30
+29205082,unclassified,likely,Avenue du Commandant l'Herminier,,,,,asphalt,yes,30
+33581450,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+34245837,cycleway,legal,Porte de Croix-Luizet,,,,,asphalt,,
+34245974,cycleway,legal,Porte de Croix-Luizet,,,,,asphalt,yes,
+34245976,cycleway,legal,Porte de Croix-Luizet,,,,,concrete,,
+37406901,path,legal,,designated,,,,fine_gravel,,
+38771467,residential,likely,Rue Pierre Cacard,,,,,asphalt,yes,30
+38771468,residential,likely,Rue des Boucherets,,,,yes,asphalt,,30
+38771470,unclassified,likely,Impasse des Iris,,,,,asphalt,,30
+47294870,cycleway,legal,Chemin de Contre-Halage,,,,,fine_gravel,,
+47294871,primary,likely,,,,,yes,asphalt,yes,30
+47297618,path,legal,,designated,,,,asphalt,no,
+47297621,path,legal,Chemin de Halage,designated,,,,compacted,no,
+47297622,primary,likely,Rue du 4 Août 1789,,,,yes,asphalt,yes,50
+47297628,unclassified,likely,Rue du Canal,,lane,,no,asphalt,yes,30
+47297632,unclassified,likely,,,,,,asphalt,yes,30
+49520809,unclassified,likely,Rue du Canal,,,,yes,asphalt,,30
+56304517,cycleway,legal,,,,,,asphalt,no,
+56304518,cycleway,legal,,,,,,asphalt,no,
+56304519,cycleway,legal,,,,,,asphalt,,
+85067978,path,legal,,designated,,,,compacted,yes,
+88516025,residential,likely,Avenue Jean Capelle,,,,,asphalt,yes,30
+88531701,tertiary,legal,Rue de la Doua,yes,,,no,asphalt,yes,30
+95658178,residential,likely,Rue des Coquelicots,,,,,,,30
+95658183,living_street,likely,Rue des Genièvres,,,,,,,
+95658184,living_street,likely,Rue des Violettes,,,,,,,
+95658185,living_street,likely,Rue Marcel,,,,,,,
+95658188,living_street,likely,Rue Claudia,,,,,,,
+95658191,service,likely,,,,,,,,
+95658192,service,likely,,,,,,,,
+100104610,unclassified,legal,Rue Marie-Antoinette,yes,,yes,yes,asphalt,,30
+102556555,unclassified,likely,Rue Eugène Pottier,,,,,asphalt,,30
+106608860,path,legal,,designated,,,,,,
+106608861,residential,likely,Rue Montgolfier,,,,,asphalt,yes,30
+106608905,tertiary,likely,Rue Château-Gaillard,,,,,asphalt,yes,30
+107078239,residential,likely,Avenue Jean Capelle,,,,yes,asphalt,,30
+107078243,cycleway,legal,,,,,,asphalt,yes,
+107078249,residential,likely,Avenue Jean Capelle,,,,yes,asphalt,,30
+107078250,residential,likely,Avenue Jean Capelle,,,,yes,asphalt,yes,30
+107078253,residential,likely,Avenue Jean Capelle,,,,yes,asphalt,yes,30
+108043727,tertiary,likely,Rue du 1er Mars 1943,,,,yes,asphalt,yes,30
+119438058,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+119438059,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+119439118,residential,likely,Rue Alexis Perroncel,,no,,,asphalt,yes,30
+119439799,residential,likely,Rue Édouard Vaillant,,,,yes,asphalt,,30
+119440078,tertiary,likely,Rue Anatole France,,,,yes,asphalt,yes,30
+121556451,residential,likely,Rue Jean-Baptiste Clément,,,,yes,asphalt,yes,30
+121557820,residential,likely,Rue des Antonins,,,,yes,asphalt,yes,30
+121771237,residential,likely,Rue du Professeur Émile Bouvier,,,,yes,asphalt,,30
+126471498,secondary,likely,Rue du 4 Août 1789,,,,yes,asphalt,yes,30
+128754991,living_street,legal,Passage Rey,yes,,,,concrete,yes,20
+128754993,living_street,legal,Passage Rey,yes,,,,asphalt,yes,20
+128930529,tertiary,likely,Avenue du Commandant l'Herminier,,,,yes,asphalt,yes,30
+128930533,tertiary,likely,Rue Docteur Rollet,,,,yes,asphalt,yes,30
+128930534,tertiary,likely,Rue Docteur Rollet,,,,yes,asphalt,yes,30
+128930536,unclassified,likely,Avenue du Commandant l'Herminier,,,,yes,asphalt,yes,30
+128942877,tertiary,likely,Rue du 8 Mai 1945,,,,,asphalt,,30
+128942883,tertiary,likely,Rue du 8 Mai 1945,,lane,,no,asphalt,yes,30
+128942887,cycleway,legal,,,,,yes,asphalt,yes,
+128982875,unclassified,likely,Boulevard Niels Bohr,,,,no,asphalt,yes,30
+128984192,path,legal,,designated,,,,concrete,no,
+128984195,path,legal,,designated,,,,wood,,
+128988943,service,legal,,yes,,private,,asphalt,yes,
+131298875,path,legal,Chemin de Halage,designated,,,,concrete,no,
+133480183,service,legal,Rue de Pierrefrite,yes,,,,asphalt,yes,35
+135564551,secondary,likely,Avenue d'Orcha,,,,,,,50
+138208717,residential,likely,Rue Alexis Perroncel,,,,,asphalt,yes,30
+138208718,unclassified,likely,Rue Armand,,,,yes,asphalt,,30
+138233899,unclassified,likely,Rue Frédéric Fays,,,yes,yes,asphalt,yes,30
+138233900,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+138233901,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+139377975,unclassified,legal,Rue Frédéric Fays,yes,,yes,yes,asphalt,yes,30
+139566255,cycleway,legal,Rue du Canal,,,,,asphalt,,
+139566257,cycleway,legal,Rue du Canal,,,,,asphalt,,
+139575131,cycleway,legal,Allée du Mens,,,,yes,asphalt,,
+140650798,service,legal,,yes,,no,yes,,,50
+140650801,path,legal,,yes,,,,asphalt,,
+147614652,tertiary,likely,Rue Montgolfier,,,,,asphalt,yes,30
+147745599,tertiary,likely,Avenue du 8 Mai 1945,,,,,asphalt,,50
+147751401,service,likely,Rue du Canal,,,,yes,asphalt,,
+147751405,service,likely,,,,,yes,asphalt,,
+147751412,path,legal,Promenade Parc de Miribel,designated,,,,asphalt,no,
+148448200,unclassified,likely,Rue Lakanal,,,,yes,asphalt,yes,50
+148722941,service,likely,,,,,,paving_stones,,
+148836310,track,likely,Chemin de Balmont,,,,,,,
+148836474,residential,likely,Rue de la Digue,,,,,,,30
+157415763,primary,likely,Rue du 4 Août 1789,,,,yes,asphalt,yes,30
+157655114,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+157655117,primary,likely,Rue du 4 Août 1789,,,,yes,asphalt,yes,30
+159830150,residential,likely,Rue Raoul Durand,,,,yes,asphalt,yes,30
+161811269,unclassified,likely,Chemin du Gabugy,,,,,,,
+164330072,unclassified,legal,,yes,,,,,,
+170806686,residential,likely,Rue Saint-Jean,,lane,,,asphalt,,30
+174044126,residential,likely,Rue Paul Lafargue,,,,yes,asphalt,yes,30
+174044127,tertiary,likely,Rue Anatole France,,,,yes,asphalt,yes,30
+174044128,cycleway,legal,,,,,yes,asphalt,yes,
+174044129,tertiary,likely,Rue Anatole France,,,,yes,asphalt,yes,30
+179780439,tertiary,likely,Avenue Georges Rougé,,lane,,yes,asphalt,,
+187017421,tertiary,likely,Rue du 1er Mars 1943,,,,,asphalt,yes,30
+187180133,cycleway,legal,Chemin de Contre-Halage,,,,,fine_gravel,,
+187184353,cycleway,legal,Porte de Croix-Luizet,,,,,asphalt,,
+187196977,primary,likely,Rue du 4 Août 1789,,,,yes,asphalt,yes,50
+187196978,cycleway,legal,Avenue Gabriel Péri,,,,yes,,yes,
+187196979,cycleway,legal,Avenue Gabriel Péri,,,,yes,,,
+187763833,cycleway,legal,Rue du Canal,,,,no,asphalt,,
+187764213,cycleway,legal,Promenade Parc de Miribel,,,,,asphalt,,
+187764827,cycleway,legal,Avenue d'Orcha,,,,no,asphalt,,
+187775001,secondary,likely,Avenue Pablo Picasso,,lane,,,asphalt,yes,50
+187775004,path,legal,,designated,,,,,,
+189322604,cycleway,legal,,,,,yes,asphalt,,
+189322605,cycleway,legal,,,,,yes,asphalt,,
+189873044,cycleway,legal,,,,,yes,asphalt,,
+190000440,tertiary,likely,Avenue du 8 Mai 1945,,,,,asphalt,yes,30
+190000445,tertiary,likely,Avenue du 8 Mai 1945,,,,,asphalt,,50
+190001753,primary,likely,Avenue Gabriel Péri,,,,yes,asphalt,yes,50
+190001754,primary,likely,Avenue Gabriel Péri,,,,yes,asphalt,yes,50
+190002063,tertiary,likely,Rue Émile Zola,,,,yes,asphalt,yes,30
+190007942,service,no,rue Émile Zola,,,no,no,concrete,,
+190405256,primary,likely,Avenue Gabriel Péri,,,,yes,asphalt,yes,30
+190405257,unclassified,likely,Rue des Jardins,,lane,,,,,30
+190405259,unclassified,likely,Rue du Canal,,,,no,asphalt,,30
+191984182,tertiary,likely,Avenue du 8 Mai 1945,,,,,,,30
+193308341,cycleway,legal,,,,,yes,asphalt,,
+193308343,cycleway,legal,,,,,yes,asphalt,,
+202070829,residential,likely,Rue Saint-Jean,,,,,asphalt,,30
+202070830,residential,likely,Rue des Jardins,,,,yes,,,30
+207580076,tertiary,likely,Rue du 1er Mars 1943,,,,,asphalt,yes,30
+207728317,tertiary,likely,Rue Château-Gaillard,,,,,asphalt,yes,30
+207728318,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+207728319,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+207728320,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+207728321,tertiary,likely,Rue Francis de Pressensé,,,,no,asphalt,yes,30
+207908670,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+209183483,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+209183484,tertiary,likely,Rue Anatole France,,,,yes,asphalt,yes,30
+210729578,path,legal,Chemin de Halage,designated,,,,asphalt,no,
+219495257,residential,likely,Rue Édouard Vaillant,,,,yes,asphalt,yes,30
+219495258,residential,likely,Rue Édouard Vaillant,,,,yes,asphalt,yes,30
+237920407,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+237920408,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+238693880,tertiary,likely,Rue Château-Gaillard,,,,,asphalt,yes,30
+238770987,tertiary,likely,Rue Flachet,,,,,asphalt,,30
+242582938,residential,likely,Rue Édouard Vaillant,,,,yes,asphalt,,30
+262831068,residential,likely,Rue Edmonde Charles-Roux,,,,,dirt,,30
+264738495,residential,likely,Rue Alexis Perroncel,,,,yes,asphalt,,30
+264738496,living_street,likely,Rue Billon,,no,,yes,asphalt,yes,
+264738501,residential,likely,Rue Alexis Perroncel,,,,yes,asphalt,,30
+264738502,residential,likely,Rue Viret,,,,yes,asphalt,,30
+265905832,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+265905833,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+294059833,cycleway,legal,Promenade Jeanne-Barret,,,,,asphalt,yes,
+314927540,primary,likely,Avenue Gabriel Péri,,,,,asphalt,yes,
+314927541,primary,likely,Avenue Gabriel Péri,,,,yes,asphalt,yes,50
+314928809,cycleway,legal,Avenue Gabriel Péri,,,,yes,,yes,
+314928810,cycleway,legal,Avenue Gabriel Péri,,,,yes,,yes,
+331761785,unclassified,likely,Allée du Mens,,lane,,,,,30
+331761786,unclassified,likely,Allée du Mens,,,,,asphalt,,30
+332927317,tertiary_link,no,,,,,,asphalt,yes,30
+336053490,cycleway,legal,,,,,no,asphalt,yes,
+362429218,primary,likely,Cours Émile Zola,,,yes,yes,asphalt,yes,30
+385669579,tertiary,likely,Avenue Albert Einstein,,,,,asphalt,yes,50
+385669582,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+386959361,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+386959724,primary,likely,Cours Émile Zola,,,yes,yes,asphalt,yes,30
+397567593,tertiary,likely,Avenue du 8 Mai 1945,,,,,asphalt,yes,30
+407938334,unclassified,likely,Boulevard Niels Bohr,,,,no,asphalt,,30
+407938337,unclassified,likely,Boulevard Niels Bohr,,,,no,asphalt,,30
+412411365,tertiary,likely,Avenue du 8 Mai 1945,,,,yes,asphalt,,50
+412411368,tertiary,likely,Avenue du 8 Mai 1945,,,,yes,asphalt,,50
+412411371,secondary,likely,Avenue du 8 Mai 1945,,,,yes,asphalt,,50
+415533897,path,uncertain,,,,,,wood,,
+440406365,unclassified,likely,Boulevard Niels Bohr,,,,,asphalt,,30
+440813457,tertiary,legal,Rue Colin,yes,,,yes,asphalt,yes,30
+448960167,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+472933081,path,legal,,designated,,,,asphalt,,
+472933083,path,legal,,designated,,,,asphalt,,
+472933086,path,legal,,designated,,,,asphalt,,
+472933095,tertiary,likely,Rue du 8 Mai 1945,,lane,,,asphalt,,30
+472933099,service,likely,,,,,,asphalt,,
+472933101,service,likely,,,,,,asphalt,,
+472933103,service,likely,,,,,,asphalt,,
+472933105,service,likely,,,,,,asphalt,,
+473027037,cycleway,legal,,,,,,,,
+473027039,cycleway,legal,,,,,,,,
+473027041,cycleway,legal,,,,,yes,,,
+473027045,cycleway,legal,,,,,yes,,,
+473319953,cycleway,legal,,,,,yes,asphalt,no,
+473799031,secondary,likely,Rue du 4 Août 1789,,,,yes,asphalt,yes,30
+473799033,secondary,likely,Rue du 4 Août 1789,,,,yes,asphalt,yes,30
+473802584,secondary,likely,Rue du 4 Août 1789,,,,yes,asphalt,yes,30
+473802585,secondary,likely,Rue du 4 Août 1789,,,,yes,asphalt,yes,30
+473810915,residential,likely,Rue de France,,,,yes,asphalt,yes,30
+473810916,residential,likely,Rue de France,,,,yes,asphalt,yes,30
+473810917,residential,likely,Rue de France,,,,yes,asphalt,yes,30
+476135876,tertiary,likely,Avenue du 8 Mai 1945,,,,,,,30
+488896005,cycleway,legal,,,,,,compacted,,
+489089590,cycleway,legal,Rue du Canal,,,,,asphalt,,
+489089591,cycleway,legal,Rue du Canal,,,,,asphalt,,
+489089592,unclassified,likely,Rue du Canal,,,,no,asphalt,,30
+542273339,primary,likely,Cours Émile Zola,,,yes,yes,asphalt,,30
+544368034,secondary,likely,Rue du 4 Août 1789,,,,yes,asphalt,yes,30
+563817708,secondary,likely,Avenue Pablo Picasso,,lane,,,asphalt,,50
+600021527,living_street,likely,Rue des Boucherets,,,,yes,asphalt,,20
+636339223,path,legal,Chemin de Halage,designated,,,,asphalt,no,
+636564937,path,legal,,designated,,,,asphalt,,
+661296349,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+662496006,tertiary,likely,Rue des Bienvenus,,,,yes,asphalt,,30
+670257355,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+673841818,cycleway,legal,,,,,yes,asphalt,yes,
+681563614,cycleway,legal,,designated,,,,concrete,,
+682271456,tertiary,likely,Rue Château-Gaillard,,,,,asphalt,yes,30
+725375435,cycleway,legal,,,,,,asphalt,yes,
+732458560,residential,likely,Avenue Marcel Cerdan,,,,yes,asphalt,yes,30
+732458561,residential,likely,Avenue Marcel Cerdan,,,,yes,,,30
+732458562,path,legal,,designated,,,,asphalt,,
+732458563,cycleway,legal,,,,,,asphalt,no,
+732458564,cycleway,legal,,,,,,asphalt,yes,
+763112518,cycleway,legal,,,,,,asphalt,yes,
+763112519,cycleway,legal,,,,,,asphalt,yes,
+764072723,tertiary,likely,Rue Anatole France,,,,yes,asphalt,yes,30
+764072724,tertiary,likely,Avenue du Commandant l'Herminier,,,,yes,asphalt,yes,30
+764072725,unclassified,likely,Avenue du Commandant l'Herminier,,no,,yes,asphalt,yes,30
+764072726,unclassified,likely,Avenue du Commandant l'Herminier,,no,,yes,asphalt,yes,30
+764072727,unclassified,likely,Avenue du Commandant l'Herminier,,,,yes,asphalt,yes,30
+764072728,tertiary,likely,Rue Anatole France,,no,,no,asphalt,yes,30
+764072730,tertiary,likely,Rue Anatole France,,,,yes,asphalt,yes,30
+764072731,tertiary,likely,Rue Anatole France,,lane,,yes,asphalt,yes,30
+788044033,tertiary,likely,Rue Château-Gaillard,,,,,asphalt,yes,30
+791771814,secondary,likely,Avenue Pablo Picasso,,lane,,,asphalt,yes,50
+804932821,tertiary,likely,Avenue Albert Einstein,,,,yes,asphalt,,50
+804932822,tertiary,likely,Rue de la Feyssine,,,,yes,asphalt,,50
+804932825,cycleway,legal,Porte de Croix-Luizet,,,,,asphalt,yes,
+804938459,tertiary,likely,Avenue Albert Einstein,,,,,asphalt,,50
+804971693,path,legal,,yes,,,,compacted,yes,
+804971720,path,legal,,designated,,,,concrete,yes,
+804971724,path,legal,,yes,,,,compacted,no,
+807962981,path,legal,,designated,,,,asphalt,yes,
+807962982,path,legal,,designated,,,,asphalt,yes,
+810354528,cycleway,legal,,,,,no,,yes,
+814009488,primary,likely,Avenue Gabriel Péri,,track,,yes,asphalt,yes,30
+814009489,primary,likely,Avenue Gabriel Péri,,,,yes,asphalt,yes,50
+816881192,path,legal,,designated,,,,asphalt,yes,
+845315345,path,legal,,designated,,,,asphalt,yes,
+848037663,residential,legal,Rue de l'Émetteur,yes,no,,no,asphalt,,30
+850249248,tertiary,likely,Avenue Albert Einstein,,,,,asphalt,yes,50
+850249249,tertiary,likely,Avenue Albert Einstein,,,,,asphalt,,50
+850249250,tertiary,likely,Avenue Albert Einstein,,,,,asphalt,,50
+850249251,tertiary,likely,Avenue Albert Einstein,,,,,asphalt,,50
+851770276,cycleway,legal,,,,,,asphalt,no,
+856520776,service,likely,,,,permit,yes,asphalt,,
+862152545,primary,likely,Avenue Gabriel Péri,,,,yes,asphalt,yes,30
+917471640,unclassified,likely,Rue Françoise Héritier,,,,yes,asphalt,yes,30
+933277031,cycleway,legal,Avenue Gabriel Péri,,,,yes,,,
+971077642,cycleway,legal,Avenue Jean Capelle,,,,,asphalt,,30
+971077644,residential,likely,Avenue Jean Capelle,,,,yes,asphalt,yes,30
+976995685,cycleway,legal,,,,,no,asphalt,yes,
+977427786,unclassified,likely,Rue Léon Chomel,,,,yes,asphalt,yes,30
+977427787,unclassified,likely,,,,,yes,asphalt,yes,30
+992152580,tertiary,likely,Rue Château-Gaillard,,,,,asphalt,yes,30
+992152581,residential,likely,Rue Raspail,,,,yes,asphalt,,30
+992389962,tertiary,likely,Avenue Georges Rougé,,lane,,yes,asphalt,,
+1001535905,cycleway,legal,,,,,,concrete,yes,
+1014365670,unclassified,likely,Avenue Georges Rougé,,,,,asphalt,,
+1017165478,path,legal,,designated,,,,asphalt,yes,
+1017165479,cycleway,legal,,,,,,asphalt,,
+1019061691,unclassified,likely,Chemin du Gabugy,,,,,asphalt,,
+1042216578,cycleway,legal,,,,,,asphalt,yes,
+1063307931,track,legal,,yes,,,,compacted,yes,
+1089881531,cycleway,legal,,yes,,,yes,asphalt,,
+1089881532,cycleway,legal,Rue du 8 Mai 1945,,,,yes,asphalt,,
+1089881533,cycleway,legal,Rue du 8 Mai 1945,,,,no,asphalt,,
+1148673329,tertiary,likely,Rue Anatole France,,,,yes,asphalt,yes,30
+1157770119,tertiary,likely,Rue du 8 Mai 1945,,,,,asphalt,,30
+1163373140,path,legal,,yes,,,,ground,,
+1163373143,path,legal,,yes,,,,ground,,
+1181702135,cycleway,legal,Chemin de Contre-Halage,,,,,asphalt,,
+1181702136,cycleway,legal,Chemin de Contre-Halage,,,,,fine_gravel,,
+1181702137,cycleway,legal,Chemin de Contre-Halage,,,,,fine_gravel,,
+1181702138,cycleway,legal,Chemin de Contre-Halage,,,,,fine_gravel,,
+1181702139,cycleway,legal,Porte de Croix-Luizet,,,,,asphalt,,
+1191768306,path,legal,,yes,,,,fine_gravel,,
+1191768307,path,legal,,yes,,,,fine_gravel,,
+1202884294,path,legal,,designated,,,,fine_gravel,,
+1207355975,cycleway,legal,,,,,,asphalt,,
+1210255344,service,legal,,yes,,no,yes,,yes,50
+1219405981,cycleway,legal,Rue du Canal,,,,,asphalt,,
+1226924367,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1226924368,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,,30
+1226924369,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1226926315,residential,likely,Rue Racine,,,,no,asphalt,yes,30
+1226926316,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1232412428,tertiary,likely,,,,,,asphalt,,
+1232412429,tertiary,likely,,,,,,asphalt,,
+1232412430,tertiary,likely,,,,,,asphalt,,
+1232412431,tertiary,likely,,,,,,asphalt,,
+1232412432,unclassified,likely,Avenue Henri Barbusse,,,,,asphalt,,
+1232412434,tertiary,likely,Avenue Georges Rougé,,,,yes,asphalt,,
+1233586183,cycleway,legal,,,,,no,asphalt,yes,
+1233586188,tertiary,likely,Avenue Albert Einstein,,,,,asphalt,yes,50
+1233586189,tertiary,likely,Avenue Albert Einstein,,,,,asphalt,yes,50
+1233586190,tertiary,likely,Avenue Albert Einstein,,,,,asphalt,yes,50
+1233586191,tertiary,likely,Avenue Albert Einstein,,,,,asphalt,yes,50
+1233586192,cycleway,legal,,,,,no,concrete,yes,
+1233586200,cycleway,legal,,,,,yes,asphalt,,
+1233586203,cycleway,legal,,,,,no,concrete,yes,
+1233586206,cycleway,legal,,,,,no,,yes,
+1233586208,tertiary,likely,Avenue Albert Einstein,,,,yes,asphalt,yes,50
+1242059595,cycleway,legal,,designated,,,yes,asphalt,yes,
+1242060374,cycleway,legal,,designated,,,,asphalt,,
+1242060376,cycleway,legal,,,,,,asphalt,,
+1265084039,path,legal,Boulevard Niels Bohr,designated,,,,asphalt,yes,
+1265084040,cycleway,legal,,,,,no,,yes,
+1265084041,cycleway,legal,,,,,no,,yes,
+1281833374,cycleway,legal,,yes,,,,,,
+1281833375,cycleway,legal,,yes,,,,,,
+1284682650,path,legal,,designated,,,,fine_gravel,,
+1284682651,path,legal,,designated,,,,fine_gravel,,
+1284682653,cycleway,legal,Chemin de Contre-Halage,,,,,fine_gravel,,
+1290622179,tertiary,likely,Avenue Albert Einstein,,,,,asphalt,yes,50
+1290634347,residential,likely,Rue Octavie,,,,yes,asphalt,yes,30
+1293353036,cycleway,legal,Avenue d'Orcha,,,,yes,asphalt,,
+1293353038,cycleway,legal,Avenue d'Orcha,,,,yes,asphalt,,
+1293366819,cycleway,legal,Avenue Gaston Monmousseau,,,,yes,asphalt,,
+1293375282,cycleway,legal,,,,,,asphalt,no,
+1293807745,tertiary,legal,Rue Colin,yes,,,yes,asphalt,yes,30
+1300250269,path,legal,,designated,,,,concrete,yes,
+1301996708,cycleway,legal,,,,,,asphalt,,
+1305919230,tertiary,likely,Rue Anatole France,,no,,yes,asphalt,yes,30
+1313721822,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+1313817820,unclassified,likely,Rue Lançon,,,,yes,asphalt,yes,30
+1315930603,path,legal,,designated,,,,asphalt,yes,
+1315930612,cycleway,legal,,,,,yes,,,
+1316660302,cycleway,legal,,,,,yes,asphalt,yes,
+1316660303,cycleway,legal,,,link,,yes,,yes,
+1316660304,cycleway,legal,,,link,,,asphalt,yes,
+1316660305,cycleway,legal,,,,,yes,asphalt,no,
+1317821169,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+1326470559,path,legal,,designated,,,,concrete,yes,
+1326470560,path,legal,,yes,,,,compacted,yes,
+1326470561,path,legal,,yes,,,,compacted,yes,
+1354280962,secondary,likely,Avenue d'Orcha,,,,yes,,,50
+1354280963,secondary,likely,Avenue d'Orcha,,,,yes,,,50
+1354280964,secondary,likely,Avenue d'Orcha,,,,yes,,,50
+1354280965,secondary,likely,Avenue d'Orcha,,,,yes,,,50
+1354642604,service,no,,,,private,,,,
+1364816868,cycleway,legal,,,,,yes,asphalt,yes,
+1380005199,cycleway,legal,,,,,yes,asphalt,,
+1390914002,cycleway,legal,,,,,,asphalt,yes,
+1410069702,cycleway,legal,,yes,,,,,,
+1410069704,cycleway,legal,,yes,,,,,,
+1417585576,tertiary,likely,Rue du 1er Mars 1943,,,,yes,asphalt,yes,30
+1420135368,primary,likely,Cours Émile Zola,,lane,,no,asphalt,yes,30
+1420135369,primary,likely,Cours Émile Zola,,lane,,no,asphalt,yes,30
+1420135888,primary,likely,Cours Émile Zola,,lane,,no,asphalt,yes,30
+1420136107,residential,likely,Petite Rue Pasteur,,,,,asphalt,yes,30
+1420136218,residential,likely,Petite Rue Pasteur,,,,,asphalt,yes,30
+1420136783,primary,likely,Cours Émile Zola,,lane,,no,asphalt,yes,30
+1420136784,primary,likely,Cours Émile Zola,,lane,,no,asphalt,yes,30
+1420136785,primary,likely,Cours Émile Zola,,lane,,no,asphalt,yes,30
+1420136786,primary,likely,Cours Émile Zola,,lane,,no,asphalt,yes,30
+1420137325,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420137742,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420137743,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420138327,residential,likely,Rue Victor Subit,,,,,asphalt,yes,30
+1420139152,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420139449,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420139543,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420139544,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420139760,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420140140,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420140480,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420140922,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420141158,residential,likely,Rue Jules Kumer,,,,yes,asphalt,yes,30
+1420141267,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420142181,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420142289,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420142533,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1420142561,primary,likely,Cours Émile Zola,,,,,asphalt,yes,30
+1426444502,cycleway,legal,Rue du Canal,,,,,asphalt,,
+1430224500,cycleway,legal,,,,,yes,,,
+1430224501,cycleway,legal,,,,,yes,,,
+1441827169,secondary,likely,Avenue Pablo Picasso,,lane,,,asphalt,yes,50
+1444562676,cycleway,legal,Rue du Canal,,,,,,,
+1444562677,path,legal,,designated,,,,,,
+1455284918,cycleway,legal,Rue des Sciences,,,,,asphalt,,30
+1455326178,cycleway,legal,,,,,,,,
+1461910450,residential,likely,Rue Alexis Perroncel,,,,yes,asphalt,,30
+1461910451,tertiary,likely,Rue Francis de Pressensé,,,,yes,asphalt,yes,30
+1466167911,unclassified,likely,,,,,,asphalt,yes,30
+1468035593,cycleway,legal,,,link,,,,,
+1468035594,cycleway,legal,,,,,no,asphalt,yes,
+1471718434,cycleway,legal,,,link,,no,asphalt,,
+1471718435,cycleway,legal,,,link,,no,asphalt,,
+1474124816,cycleway,legal,,,,,,,,
+1474740618,path,legal,,designated,,,no,,,
+1474740622,path,legal,,designated,,,,,,
+1476085391,tertiary,likely,Rue du 8 mai 1945,,,,,,,
+1476787750,path,uncertain,,,,,,,,
+1476926876,cycleway,legal,,yes,,,,,,
+1476926877,cycleway,legal,Rue du Canal,,,,,asphalt,,
+1476926878,path,legal,,designated,,,,,,
+1477394697,cycleway,legal,,,,,,concrete,,
+1478740651,cycleway,legal,,permit,,,,asphalt,,
+1478740653,service,likely,,,,,,asphalt,,
+1480718091,cycleway,legal,Rue des Sciences,,,,,asphalt,,30
+1486345408,cycleway,legal,,,,,,,,
+1486345409,cycleway,legal,,yes,,,no,asphalt,,
+1486345411,cycleway,legal,,yes,,,no,asphalt,,
+1489729018,cycleway,legal,,,,,,,,
+1503539060,service,legal,,yes,,,,compacted,yes,
+1503653466,cycleway,legal,,,,,,concrete,,
+1503653468,cycleway,legal,,,,,,,,
+1503653469,cycleway,legal,,,,,,,,
+1503747286,cycleway,legal,,,,,yes,,,
+1503747287,cycleway,legal,,,,,yes,,,
+1503747288,cycleway,legal,,,,,,,,
+1512990799,path,legal,,designated,,,,,,
+1512990800,path,legal,,designated,,,,,,

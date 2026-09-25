@@ -28,6 +28,15 @@ data/donnees_valides/geographie/france_srtm.tif
 # ~80 Mo - cours d'eau/littoral extraits d'OSM
 data/donnees_valides/geographie/waterways_coastline.gpkg
 
+# réseau_fob/<annee>/ (03_creation_du_jeu_de_donnees_cyclable/02_FOB) : mélange de caches
+# intermédiaires très volumineux (jusqu'à ~1 Go, un extrait OSM entier passe par là) et de résultats
+# finis minuscules - inverse des autres dossiers ci-dessus : tout est ignoré PAR DÉFAUT, seuls les
+# résultats finis sont explicitement gardés (voir 02_FOB/README.md, "Où vont les données").
+data/donnees_valides/reseau_fob/*/*
+!data/donnees_valides/reseau_fob/*/longueurs_fob.parquet
+!data/donnees_valides/reseau_fob/*/longueurs_fob_amenagements.parquet
+!data/donnees_valides/reseau_fob/*/meta.json
+
 # ═══════════════════════════════════════════════════════════════════════════
 # le reste (Python, notebooks, éditeurs)
 # ═══════════════════════════════════════════════════════════════════════════

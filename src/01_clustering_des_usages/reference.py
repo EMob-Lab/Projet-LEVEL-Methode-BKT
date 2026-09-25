@@ -21,8 +21,8 @@ from pathlib import Path
 
 import pandas as pd
 
-# la signification de chaque cluster POUR CE RUN précisément (voir VV5/src/bkt/commun/config.py -
-# CLUSTER_NAMES/cartes/couleurs.py, mêmes identifiants numériques, mêmes noms/couleurs).
+# la signification de chaque cluster POUR CE RUN précisément - mêmes identifiants numériques, mêmes
+# noms et couleurs que partout ailleurs dans ce dépôt où K=4 est utilisé.
 CLUSTER_NAMES: dict[int, str] = {
     0: "Péri-urbain loisirs",
     1: "Domicile travail",

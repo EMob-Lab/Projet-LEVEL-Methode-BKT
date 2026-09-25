@@ -12,7 +12,7 @@ différence que ces schémas existent :
     EnregistrementCapteur   UN capteur, tel que stocké dans sensors.msgpack (capteurs.py) - ses
                              métadonnées + son débit codé de chaque année, format de stockage compact.
     LigneCapteurAnnee       UNE ligne de sensor_years.parquet (capteurs_annees.py) - un (capteur,
-                             année) : débit annuel, TMJ, indicateurs d'activité.
+                             année) : débit annuel, QTA, indicateurs d'activité.
     LigneProfilUsage        UNE ligne de usage_profiles.parquet (profils_usage.py) - un (capteur,
                              année) résumé en 4 profils temporels (jour/semaine/année/spectral), la
                              matière première du clustering d'usage (étape suivante du projet).
@@ -142,9 +142,9 @@ class LigneCapteurAnnee(BaseModel):
         ge=0,
         description="Nombre d'heures avec un comptage valide cette année (les autres sont 'manquantes', pas 'nulles').",
     )
-    tmj: float = Field(
+    qta: float = Field(
         ge=0,
-        description="'TMJ' = annual_flow / n_valid_h x 365 - PAS ENCORE la grandeur utilisée par le calcul du BKT (correction x24 appliquée plus tard, voir la docstring de 'capteurs_annees.py').",
+        description="'Quantité de Trafic Annuel' = annual_flow / n_valid_h x 8760 - estimation du nombre total de passages sur l'année (voir la docstring de 'capteurs_annees.py'). Déjà la grandeur utilisée telle quelle par le calcul du BKT (étape 05), aucune correction supplémentaire.",
     )
     activity_share: float = Field(
         ge=0,
@@ -155,7 +155,7 @@ class LigneCapteurAnnee(BaseModel):
         description="True si le capteur a mesuré SUFFISAMMENT cette année (activity_share > 5% ET total_flow > 100) - SEULS les capteurs actifs entrent dans le calcul du BKT observé."
     )
     valid: bool = Field(
-        description="True si le capteur a mesuré un peu de débit (tmj > 0) - condition plus faible que 'active'."
+        description="True si le capteur a mesuré un peu de débit (qta > 0) - condition plus faible que 'active'."
     )
     total_flow: float = Field(
         ge=0,

@@ -61,7 +61,7 @@ from profils_usage import (  # noqa: E402
 
 EPS = 1e-12
 
-# valeurs par défaut = celles de l'étude K=4 historique (voir VV5/src/bkt/etape02_clustering_usage/multiscale.py)
+# valeurs par défaut = celles de l'étude K=4 historique
 N_BASE_JOUR_DEFAUT = 12
 N_BASE_SEMAINE_DEFAUT = 18
 N_BASE_ANNEE_DEFAUT = 6

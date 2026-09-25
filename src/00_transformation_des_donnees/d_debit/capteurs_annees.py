@@ -6,15 +6,13 @@ Pour chaque (capteur, année), calculés à partir du débit horaire :
 
     annual_flow    somme des comptages horaires valides sur l'année
     n_valid_h      nombre d'heures avec un comptage valide (les autres sont "manquantes")
-    tmj            "TMJ" = annual_flow / n_valid_h x 365 - PAS ENCORE la grandeur utilisée par le
-                   calcul du BKT : les comptages sont HORAIRES, donc cette formule donne le débit
-                   horaire moyen x 365, 24 fois trop petit pour être un vrai débit annuel. On la
-                   garde ICI telle quelle (c'est la sortie brute de cette étape) ; la correction
-                   (x 24, pour obtenir l'estimation annualisée réellement utilisée par le calcul du
-                   BKT observé) se fait à l'étape suivante, pas ici - voir
-                   'VV5/src/bkt/etape06_bkt_observe/principal.py' ('REAL_TMJ_FACTOR'), dont l'étape
-                   équivalente de ce dépôt (pas encore écrite ici) reprendra la même convention.
-    valid          le capteur a mesuré un peu de débit (tmj > 0)
+    qta            "Quantité de Trafic Annuel" - le débit HORAIRE moyen (annual_flow / n_valid_h),
+                   extrapolé aux 8760 heures d'une année complète : une estimation du nombre TOTAL de
+                   passages sur l'année si le capteur avait mesuré en continu. Le calcul du BKT (étape
+                   05) multiplie directement un linéaire (km) par 'qta' (passages/an) pour obtenir des
+                   bike-km/an, voir sa docstring. Calculée ICI, directement juste - aucune correction
+                   supplémentaire n'est nécessaire plus loin dans le pipeline.
+    valid          le capteur a mesuré un peu de débit (qta > 0)
     active         le capteur a mesuré SUFFISAMMENT : plus de 5% des heures de l'année sont non
                    nulles ET le débit total dépasse 100 passages. Un capteur "valide" mais pas
                    "actif" est un "orphelin" (exclu du BKT de cette année-là) - SEULS les capteurs
@@ -72,12 +70,12 @@ def construire_capteurs_annees(payload: dict, annees: tuple[int, ...]) -> pd.Dat
                 "annee": annee,
                 "annual_flow": annuel,
                 "n_valid_h": n_valides,
-                "tmj": annuel / n_valides * 365.0 if n_valides else 0.0,
+                "qta": annuel / n_valides * 8760.0 if n_valides else 0.0,
                 "activity_share": float((remplie > 0).sum() / n_heures),
                 "total_flow": float(remplie.sum()),
             })
     table = pd.DataFrame(lignes)
-    table["valid"] = table["tmj"] > 0
+    table["valid"] = table["qta"] > 0
     table["active"] = (table["activity_share"] > SEUIL_PART_ACTIVE) & (table["total_flow"] > SEUIL_DEBIT_TOTAL)
     return table
 
