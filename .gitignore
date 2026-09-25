@@ -12,6 +12,8 @@
 # (voir 01_clustering_des_usages/reference.py).
 data/donnees_brutes/*
 !data/donnees_brutes/reference/
+!data/donnees_brutes/reference/*
+!data/donnees_brutes/README.md
 
 # données valides : résultats de 00_transformation_des_donnees - gardés par
 # défaut (tables "finies", petites, utiles telles quelles). Exceptions, les
