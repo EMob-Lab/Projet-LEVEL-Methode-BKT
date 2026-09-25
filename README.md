@@ -13,8 +13,7 @@ par validation croisée leave-one-out.
 uv sync
 ```
 
-Installe tout ce qu'il faut (Python 3.12+, voir `pyproject.toml`). Pour ouvrir/ré-exécuter les
-notebooks en plus :
+Pour tout installer et exécuter les notebooks et autres code annexe au pipeline du BKT :
 
 ```
 uv sync --extra notebooks
